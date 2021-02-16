@@ -1,8 +1,7 @@
-export async function fetchProducts(){
-  // Resolve the products from menu.json after a random timer
-  const req = await fetch("/menu.json")
-  const data = req.json()
-  return data
+import * as MOCK from "./menu.json";
+
+export function fetchProducts() {
+  return MOCK.menu;
 }
 
 
