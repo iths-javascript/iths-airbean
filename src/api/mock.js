@@ -39,8 +39,38 @@ export async function registerUser(name, email) {
 }
 
 export async function makeOrder(userId, cardItems) {
-  console.log(userId);
-  console.log(cardItems);
+  await timeout(randomNumber());
+  let order = "";
+  if (userId) {
+    let db = [];
+    if (localStorage.userDb) {
+      db = JSON.parse(localStorage.userDb);
+    }
+    const userExist = db.find((user) => user.id === userId);
+    if (userExist) {
+      order = {
+        ...cardItems,
+        userId,
+        id: uuidv4(),
+        date: new Date().toLocaleDateString(),
+      };
+      let orders = [];
+      if (localStorage.ordersDb) {
+        orders = JSON.parse(localStorage.orderDb);
+        orders.push(order);
+        localStorage.orderDb = JSON.stringify(orders);
+      }
+    } else {
+      throw new Error("No user with that id");
+    }
+  } else {
+    order = {
+      ...cardItems,
+      id: uuidv4(),
+      date: new Date().toLocaleDateString(),
+    };
+  }
+  return order;
 }
 
 export async function fetchOrderHistory(userId) {
