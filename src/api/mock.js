@@ -1,17 +1,34 @@
-export async function fetchProducts(){
-  // Resolve the products from menu.json after a random timer
+import products from "./menu.json";
+
+const db = [];
+
+console.log(db);
+
+function randomNumber() {
+  return Math.ceil(Math.random() * 1000);
 }
 
-export async function registerUser(name, email){
-  // Resolve a random generated ID after a random timer
-  // Persist user in localStorage
+randomNumber();
+
+function timeout(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export async function makeOrder(userId, cardItems){
-  // Resolve with a orderId, order total price and ETA after a random timer
-  // Persist order coupled userId in an array in localStorage
+export async function fetchProducts() {
+  await timeout(randomNumber());
+  return products.menu;
 }
 
-export async function fetchOrderHistory(userId){
-  // Resolve an array of orders after a random timer
+export async function registerUser(name, email) {
+  console.log(name);
+  console.log(email);
+}
+
+export async function makeOrder(userId, cardItems) {
+  console.log(userId);
+  console.log(cardItems);
+}
+
+export async function fetchOrderHistory(userId) {
+  console.log(userId);
 }
