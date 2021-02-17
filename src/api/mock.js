@@ -25,7 +25,7 @@ export async function loginUser(email) {
   if (!userExist) {
     throw new Error("No user by that email exists");
   }
-  return userExist.id;
+  return userExist;
 }
 
 export async function registerUser(name, email) {
