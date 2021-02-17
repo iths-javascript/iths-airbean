@@ -70,9 +70,30 @@ export async function makeOrder(userId, cardItems) {
       date: new Date().toLocaleDateString(),
     };
   }
+  localStorage.orderDb = JSON.stringify(order);
   return order;
 }
 
 export async function fetchOrderHistory(userId) {
-  console.log(userId);
+  await timeout(randomNumber());
+  let orderDb = [];
+  let userDb = [];
+
+  if (localStorage.userDb) {
+    userDb = JSON.parse(localStorage.userDb);
+  } else {
+    throw new Error("No users exist in db");
+  }
+  const userExist = userDb.some((user) => user.id === userId);
+  if (!userExist) {
+    throw new Error("No user by that id found");
+  }
+
+  if (localStorage.orderDb) {
+    orderDb = JSON.parse(localStorage.userDb);
+  }
+
+  const orderHistory = orderDb.filter((user) => user.id === userId);
+
+  return orderHistory;
 }

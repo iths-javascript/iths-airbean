@@ -5,7 +5,12 @@
 </template>
 
 <script>
-import { fetchProducts, registerUser, makeOrder } from "@/api/mock";
+import {
+  fetchProducts,
+  registerUser,
+  makeOrder,
+  fetchOrderHistory,
+} from "@/api/mock";
 export default {
   name: "Home",
   data() {
@@ -13,6 +18,7 @@ export default {
       data: "",
       user: "",
       order: "",
+      oldOrders: "",
     };
   },
   methods: {
@@ -29,7 +35,7 @@ export default {
     },
     async orders() {
       try {
-        this.order = await makeOrder("", {
+        this.order = await makeOrder("3b4f3931-8191-4ca1-977c-4f6df4231b54", {
           items: [{ item1: "milk" }, { item2: "coffee" }],
         });
         console.log(this.order);
@@ -37,11 +43,18 @@ export default {
         console.log(error);
       }
     },
+    async orderHistory() {
+      this.orders = await fetchOrderHistory(
+        "3b4f3931-8191-4ca1-977c-4f6df4231b54"
+      );
+      console.log(this.orders, "orders");
+    },
   },
   created() {
-    this.getData();
-    this.register();
-    this.orders();
+    // this.getData();
+    // this.register();
+    // this.orders();
+    this.orderHistory();
   },
 };
 </script>
