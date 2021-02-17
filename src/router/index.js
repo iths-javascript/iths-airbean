@@ -3,10 +3,16 @@ import VueRouter from "vue-router";
 import Meny from "../views/Meny.vue";
 import About from "../views/About.vue";
 import Profile from "../views/Profile.vue";
-
+import Home from "../views/Home.vue";
+import OrderStatus from "../views/OrderStatus.vue";
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
   {
     path: "/meny",
     name: "Meny",
@@ -21,6 +27,11 @@ const routes = [
     path: "/profile",
     name: "Profile",
     component: Profile,
+  },
+  {
+    path: "/orderstatus",
+    name: "OrderStatus",
+    component: OrderStatus,
   },
 ];
 
