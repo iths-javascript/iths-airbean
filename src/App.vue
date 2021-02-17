@@ -1,14 +1,21 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Hamburger v-if="['home'].indexOf($route.name) <= -1"/>
     <router-view/>
   </div>
 </template>
 
+<script>
+import Hamburger from '@/components/Hamburger.vue'
+export default {
+  components: {
+    Hamburger,
+  },
+}
+</script>
+
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Work+Sans&display=swap');
 *{
   padding: 0;
   margin: 0;
@@ -22,6 +29,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: grey;
 }
 
 #nav {
