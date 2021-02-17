@@ -1,6 +1,7 @@
 <template>
 <div>
-    you
+    <nav>
+    </nav>
 </div>
 </template>
 
