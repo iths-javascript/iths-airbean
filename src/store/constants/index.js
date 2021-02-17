@@ -5,3 +5,7 @@ export const userConstants = {
   SET_ORDER_HISTORY: "setOrderHistory",
   UPDATE_ORDER_HISTORY: "updateOrderHistory",
 };
+
+export const productConstants = {
+  SET_PRODUCTS: "setProducts"
+};
