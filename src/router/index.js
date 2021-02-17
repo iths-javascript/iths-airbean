@@ -1,14 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Meny from "../views/meny.vue";
+import Meny from "../views/Meny.vue";
 import About from "../views/About.vue";
-import Profile from "../views/profile.vue";
+import Profile from "../views/Profile.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/meny",
     name: "Meny",
     component: Meny,
   },
