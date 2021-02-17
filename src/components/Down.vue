@@ -1,8 +1,8 @@
 <template>
 <div>
-    <nav>
-    </nav>
+    <img src="@/assets/graphics-footer.svg" alt="footer">
 </div>
+
 </template>
 
 <script>
