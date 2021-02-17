@@ -8,7 +8,7 @@
       <hr/>
       <router-link @click.native="open = false" :to="{name: 'about'}" >Vårt kaffe</router-link >
       <hr/>
-      <router-link @click.native="open = false" :to="{name: 'about'}" >Min profil</router-link >
+      <router-link @click.native="open = false" :to="{name: 'profile'}" >Min profil</router-link >
       <hr/>
       <router-link @click.native="open = false" :to="{name: 'about'}" >Order status</router-link >
     </div>
