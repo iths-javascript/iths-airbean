@@ -14,6 +14,20 @@ export async function fetchProducts() {
   return products.menu;
 }
 
+export async function loginUser(email) {
+  await timeout(randomNumber());
+  if (!localStorage.userDb) {
+    throw new Error("No users exists");
+  }
+  const userDb = JSON.parse(localStorage.userDb);
+
+  const userExist = userDb.find((user) => user.email === email);
+  if (!userExist) {
+    throw new Error("No user by that email exists");
+  }
+  return userExist.id;
+}
+
 export async function registerUser(name, email) {
   if (!email.includes("@")) {
     throw new Error("Not a valid email");
