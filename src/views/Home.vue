@@ -1,30 +1,32 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
-    {{ getUser }}
-    {{ getOrderHistory }}
-  </div>
+<router-link to="/about">
+  <section class="home">
+      <img src="@/assets/airbean-landing.svg" alt="">
+  </section>
+</router-link>
 </template>
 
 <script>
 export default {
-  name: "Home",
-  computed: {
-    getUser() {
-      return this.$store.getters["user/getUser"];
-    },
-    getOrderHistory() {
-      return this.$store.getters["user/getOrderHistory"];
-    },
-  },
-  methods: {
-    async login() {
-      this.$store.dispatch("user/setLogin", "test@mail.com");
-      this.$store.dispatch("user/setOrderHistory", "test@mail.com");
-    },
-  },
-  created() {
-    this.login();
-  },
+  name: "Home"
 };
 </script>
+
+<style lang="scss" scoped>
+.home{
+  height: 100%;
+  background: 
+    url('../assets/intro-graphic-left.svg')
+    top left
+    no-repeat,
+    url('../assets/intro-graphic-right.svg')
+    top right
+    no-repeat
+  ;
+  background-color: $airbean-green;
+  background-size: contain;
+
+  display: grid;
+  place-items: center;
+}
+</style>
