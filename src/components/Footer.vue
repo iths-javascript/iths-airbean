@@ -1,5 +1,5 @@
 <template>
-  <header class="header"></header>
+  <footer class="footer"></footer>
 </template>
 
 <script>
@@ -8,12 +8,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .header{
-        height: 32vw; 
+    .footer{
+        height: 20vw; 
         width: 100%;
+
         background: 
-            url('../assets/graphics-header.svg')
-            top center
+            url('../assets/graphics-footer.svg')
+            bottom center
             no-repeat
         ;
         background-size: contain;
