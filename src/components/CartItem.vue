@@ -1,5 +1,5 @@
 <template>
-  <h1>Landing page</h1>
+<h1>Cart Item</h1>
 </template>
 
 <script>
