@@ -1,16 +1,22 @@
 <template>
   <div class="about">
     <h1>Vårt Kaffe</h1>
-    <p>Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak,  doppio, 
-      grounds dripper,crema, strong whipped, variety extra iced id lungo half
-      and half mazagran.Pumpkin spice.</p>
+    <p>Pumpkin spice mug, barista cup, sit
+       macchiato, kopi-luwak,doppio,grounds 
+       dripper,crema, strong whipped, variety
+       extra iced id lungo half and half mazagran.
+       Pumpkin spice.</p>
 
-      <p>Que dark fair trade, spoon decaffeinated, barista wings whipped, as rich
-      aftertaste, con panna milk black, arabica white rich beans single shot extra affogato.
-      So affogato macchiato sit extraction instant grinder seasonal organic, turkish single shot,
-      single origin, and robusta strong to go so dripper. Viennese froth, grounds caramelization
-      skinny aromatic cup kopi-luwak, fair trade flavour, frappuccino medium, café au lait flavour
-      cultivar ut bar instant kopi-luwak.</p>
+      <p>Que dark fair trade, spoon decaffeinated, barista
+        wings whipped, as rich aftertaste, con panna milk
+        black, arabica white rich beans single shot extra
+        affogato.So affogato macchiato sit extraction
+        instant grinder seasonal organic, turkish single shot,
+        single origin, and robusta strong to go so dripper. 
+        Viennese froth, grounds caramelization skinny
+        aromatic cup kopi-luwak, fair trade flavour, 
+        frappuccino medium, café au lait flavour cultivar ut
+        bar instant kopi-luwak.</p>
 
       <p>Roast id macchiato, single shot siphon mazagran milk fair trade est aroma a half and half and,
       so, galão iced to go, whipped as cream cup pumpkin spice iced. At extra, rich grinder, brewed
@@ -22,3 +28,19 @@
   </div>
 
 </template>
+<script>
+export default {
+  
+}
+</script>
+
+<style scoped>
+@media only screen and (max-width: 600px) and (min-width: 400px)  {
+  *{
+    background-color: pink;
+  }  
+}
+
+</style>
+
+
