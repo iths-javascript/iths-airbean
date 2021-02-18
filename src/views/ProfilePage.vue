@@ -1,6 +1,7 @@
 <template>
 <div>
-    <h1 id="h1" v-if="visible" v-on:click="LoggIn">Profilepage Ska visas EN gång. Klick på DEN!</h1>
+    <h1 id="h1" v-if="visible" v-on:click="LoggIn">
+        <router-link to="/">Profilepage Ska visas EN gång. Klick på DEN!</router-link></h1>
     <h1 id="header1" v-if="notvisible">Profilepage. Ska visas efter att man loggat in</h1>
     </div>
 </template>
@@ -42,5 +43,8 @@ export default {
 
 <style scoped>
 
+router-link {
+    text-decoration: none;
+}
 
 </style>
